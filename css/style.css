@@ -121,6 +121,7 @@ footer{
 	background-color: #3a7dfd;
 	color: #fff;
 	padding: 60px 0 110px;
+	overflow: hidden;
 }
 .footer-author{
 	font-size: 24px;
