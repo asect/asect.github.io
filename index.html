@@ -1,91 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="ru">
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description">
-		<meta name="auyhor">
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-		<link rel="icon" href="/favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-		<title></title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="animate/animate.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BTC2QW</title>
+	<link rel="stylesheet" href="stylesheets/main.css">
 </head>
 <body>
 	<header>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-7 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-					<img src="img/imac--smart-object-.png" alt="screen">
+				<div class="menu-check-wrap col-2">
+					<label for="burger-shower" class="icon"><i class="fas fa-bars"></i></label>
 				</div>
-				<div class="col-lg-5 ">
-					<p class="header-pre-tittle wow fadeInLeft" data-wow-delay="0.1s">Веб-разработчик</p>
-					<h1 class="header-tittle wow fadeInRight">Владислав Ковшешенко</h1>
-					<p class="header-text wow fadeInLeft">Верстка на HTML/CSS <br> Разработка сайтов под ключ</p>
-					<div class="header-button-block wow fadeIn" data-wow-duration="3s" data-wow-delay="0.8s">
-						<a href="https://vk.com/id203383148">Связаться</a>
-						<small>*Это бесплатно</small>
+				<div class="header-left col-xl-4 col-lg-12 col-md-12 col-sm-8 col-8 d-flex flex-row align-items-center flex-lg-column flex-xl-row flex-md-column flex-sm-column flex-column">
+					<div class="header-logo">
+						<a class="logo-text">BTC2Qiwi</a>
+					</div>
+					<p class="header-logo-text">Автоматический обмен 24/7</p>
+				</div>
+				<div class="header-right col-xl-8 col-lg-12">
+					<div class="header-menu">
+						<input type="checkbox" id="burger-shower" name="burger-shower" class="burger-shower">
+						<ul class="header-menu-ul d-md-flex justify-content-between flex-xl-row flex-lg-row flex-md-row flex-sm-column" id="d">
+							<li>
+								<a href="#" class="header-menu-li">Главная</a>
+							</li>
+							<li class="header-menu-li">
+								<a href="#modal">Как работает</a>
+							</li>
+							<li class="header-menu-li">
+								<a href="#">Безопасность</a>
+							</li>
+							<li class="header-menu-li">
+								<a href="#">О нас</a>
+							</li>
+							<li class="header-menu-li">
+								<a href="#">Партнерам</a>
+							</li>
+							<li class="header-menu-li">
+								<a href="#">Контакты</a>
+							</li>
+							<li class="translate">
+								<a href="#" class="translate-lang">Ru <i class="fas fa-chevron-down"></i></a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-<section class="portfolio wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.7s">
-	<div class="container">
-		<div class="portfolio-block">
-			<h2 class="portfolio-tittle">Портфолио</h2>
-			<div class="portfolio-subtittle">Мои работы</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="portfolio-col-1">
-						<img src="img/site.png" alt="гаспром">
-						<h3>внутренний университет «Газпром нефти»</h3>
-						<p>У «Газпром нефти» есть внутренний Корпоративный университет для сотрудников. Это настоящий университет, где сотрудники проходят обучение у внутренних тренеров компании или у специально приглашенных лекторов и экспертов....</p>
-						<a href="#">Смотреть работу</a>
+	<section>
+		<div class="wrapper clearfix">
+			<div class="content ">
+				<div class="calculator ">
+					<div class="change-wrapper">
+						<div class="switch-button">
+							<label class="q-to-b" for="tab1">Обменять <strong>qiwi</strong> на <strong>Bitcoin</strong></label>
+							<label class="b-to-q" for="tab2">Обменять <strong>Bitcoin</strong> на <strong>qiwi</strong></label>
+						</div>
+						<div class="rate">
+							<p class="change-rate" id="change-rate-id">Курс обмена</p>
+							<h2 id="balance">45500 руб = 1 btc</h2>
+						</div>
+					</div>
+					<div class="main-calc">
+						<input id="tab1" type="radio" name="tabs" checked>
+						<input id="tab2" type="radio" name="tabs">	
+						<div class="main-calc-wrapper">
+							<form id="exchange-qb" name="exchange-qb">
+								<div class="calc-changing">
+									<div class="give-qiwi">
+										<div class="calc-button-label">
+											<div class="calc-label-left">
+												<p>Отдаю Qiwi-рубли</p>
+												<a title="Сумма в рублях к списанию со счета">
+													<i class="fas fa-info-circle calc-info-icon" id="sumfrom-qb-tooltip-left"></i>
+												</a>
+											</div>
+											<div class="calc-label-right">
+												<p class="range">От 300 до 60 000</p>
+												<a title="Согласно постановлению #25-34034 от 15.12.2013">
+													<i class="fas fa-info-circle calc-info-icon" id="sumfrom-qb-tooltip-right"></i>
+												</a>
+											</div>
+										</div>
+										<input type="number" class="input-area" id="qiwi-input-qb" name="qiwi" form="exchange-qb" step="any" min="300" max="60000" autocomplete="off" placeholder="500 000">
+										<span id="sumfrom_qb_er" class="formValidation">Введите сумму от 300 до 60000</span>
+									</div>
+									<div class="button">
+										<input id="tab2" type="radio" name="tabs">
+										<label class="arrow-label" for="tab2"><img src="img/4-layers.svg" class="change-arrows" alt="change-arrows"></label>
+									</div>
+									<div class="take-btc">
+										<div class="calc-button-label">
+											<div class="calc-label-left">
+												<p>Получаю Bitcoin BTC</p>
+												<a title="Сумма в Bitcoin к зачислению на счет">
+													<i class="fas fa-info-circle calc-info-icon" id="sumto-qb-tooltip-left"></i>
+												</a>
+											</div>
+											<div class="calc-label">
+												<p class="reserve">Резерв: 134,5 (1 000 000 RUB)</p>
+												<a title="Если не хватает резерва, оставьте заявку, и мы подготовим нужную сумму">
+													<i class="fas fa-info-circle calc-info-icon" id="sumto-qb-tooltip-right"></i>
+												</a>
+											</div>
+										</div>	
+										<input type="number" class="input-area" id="btc-input-qb" name="bitcoin" form="exchange-qb" min="1" max="140" step="any" autocomplete="off" placeholder="10,12">
+										<span id="sumto_qb_er" class="formValidation">Введите сумму от 1 до 140</span>	
+									</div>
+								</div>
+								<div class="calc-info">
+									<div class="qiwi-number">
+										<div class="calc-button-label">
+											<div class="calc-label">
+												<p>Укажите Qiwi-кошелек</p>
+											</div>
+										</div>
+										<input type="tel" class="input-area" id="qiwi-number-input-qb" name="qiwi-number" form="exchange-qb" placeholder="+7" minlength="16" maxlength="16" pattern="[\+][0-9]{10,13}">
+										<span class="formValidation" id="phone_er">Это поле должно содержать телефон в формате +7-123-456-78-99</span>
+									</div>
+									<div class="btc-link">
+										<div class="calc-button-label">
+											<div class="calc-label">
+												<p>Укажите адрес Bitcoin*</p>
+											</div>
+										</div>	
+										<input type="text" class="input-area" id="btc-link-input-qb" name="btc-link" form="exchange-qb" placeholder="DghdkdG844ff64GHn83901gsfldgg8ge8">
+										<span class="formValidation" id="btcpurse_er">Bitcoin-кошелек, от 27 до 34 цифр и латинских букв</span>
+									</div>
+								</div>
+								<div class="change-button-section">
+									<p>Нажимая, вы вызываете необратимую реакцию, </p>
+									<a href="#" class="agreement" id="qb-agreement">Соглашение</a>
+									<input type="submit" id="submit-1" class="change-button" name="submit-qb" form="exchange-qb" value="Обменять">
+								</div>
+							</form>
+						</div>
+						<div class="main-calc-wrapper-changed">
+							<form id="exchange_bq" name="exchange-bq">
+								<div class="calc-changing">
+									<div class="give-qiwi">
+										<div class="calc-button-label">
+											<div class="calc-label-left">
+												<p>Отдаю Bitcoin BTC</p>
+												<a title="Сумма в Bitcoin к отправке, которая должна В ТОЧНОСТИ поступить к нам на адрес">
+													<i class="fas fa-info-circle calc-info-icon" id="sumfrom-bq-tooltip-left"></i>
+												</a>
+											</div>
+											<div class="calc-label-right">
+												<p class="range">Резерв: 134,5 (1 000 000 RUB)</p>
+												<a title="Если не хватает резерва, оставьте заявку, и мы подготовим нужную сумму">
+													<i class="fas fa-info-circle calc-info-icon" id="sumfrom-bq-tooltip-right"></i>
+												</a>
+											</div>
+										</div>
+										<input type="number" class="input-area" id="btc-input-bq" name="bitcoin" form="exchange_bq" step="any" min="1" max="140" autocomplete="off" placeholder="10,12">
+										<span id="sumfrom_bq_er" class="formValidation">Введите сумму от 1 до 140</span>
+									</div>
+									<div class="button">
+										<input id="tab1" type="radio" name="tabs">
+										<label class="arrow-label" for="tab1"><img src="img/4-layers.svg" alt="change-arrows" class="change-arrows"></label>
+									</div>
+									<div class="take-btc">
+										<div class="calc-button-label">
+											<div class="calc-label-left">
+												<p>Получаю Qiwi-рубли</p>
+												<a title="Сумма в рублях к зачислению на счет">
+													<i class="fas fa-info-circle calc-info-icon" id="sumto-bq-tooltip-left"></i>
+												</a>
+											</div>
+											<div class="calc-label">
+												<p class="reserve">От 300 до 60 000</p>
+												<a title="Ограничения на сумму разового обмена для анонимности.">
+													<i class="fas fa-info-circle calc-info-icon" id="sumto-bq-tooltip-right"></i>
+												</a>
+											</div>
+										</div>	
+										<input type="number" class="input-area" id="qiwi-input-bq" name="qiwi" form="exchange_bq" step="any" min="300" max="60000" autocomplete="off" placeholder="500 000" >
+										<span id="sumto_bq_er" class="formValidation">Введите сумму от 300 до 60000</span>
+									</div>
+								</div>
+								<div class="calc-info">
+									<div class="qiwi-number">
+										<div class="calc-button-label">
+											<div class="calc-label">
+												<p>Укажите адрес Bitcoin*</p>
+											</div>
+										</div>
+										<input type="text" class="input-area" id="btc-link-input-bq" name="btc-link" form="exchange_bq" placeholder="DghdkdG844ff64GHn83901gsfldgg8ge8">
+										<span class="formValidation" id="btcpurse2_er">Bitcoin-кошелек, от 27 до 34 цифр и латинских букв</span>
+									</div>
+									<div class="btc-link">
+										<div class="calc-button-label">
+											<div class="calc-label">
+												<p>Укажите Qiwi-кошелек</p>
+											</div>
+										</div>	
+										<input type="tel" class="input-area" id="qiwi-number-input-bq" name="qiwi-number" form="exchange_bq" placeholder="+7" minlength="16" maxlength="16" pattern="[\+][0-9]{10,13}" >
+										<span class="formValidation" id="phone2_er">Это поле должно содержать телефон в формате +7-123-456-78-99</span>
+									</div>
+								</div>
+								<div class="change-button-section">
+									<p>Нажимая, вы вызываете необратимую реакцию,</p>
+									<a href="#" class="agreement" id="bq-agreement">Соглашение</a>
+									<input type="submit" id="submit-2" class="change-button" name="submit-bq" form="exchange_bq" value="Обменять">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="not-required-area">
+						<p>* Необязательное поле</p>
+					</div>
+				</div>	
+				<div class="call-to-action">
+					<div class="video">
+						<div class="video-wrap">
+							<iframe src="https://www.youtube.com/embed/Tk338VXcb24" allowfullscreen></iframe>
+						</div> 
+					</div>
+					<div class="cta-content">
+						<div class="cta-content-wrapper">
+							<h2 class="tittle">Покупайте биткойны через нашего бота в Telegram</h2>
+							<p class="bot-link">@BTC2KIWIBOT</p>
+							<p class="cta-context">
+								Биткойны могут использоваться для обмена на товары или услуги у продавцов, которые согласны их принимать.
+								Обмен на обычные валюты происходит через онлайн-сервис обмена цифровых валют, другие платёжные системы или обменные пункты.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="portfolio-col-2">
-						<img src="img/site2.png" alt="мир">
-						<h3>Сайт платежной системы «Мир»</h3>
-						<p>Обновленная версия сайта знакомит посетителей с компаниями, уже принимающими карты к оплате, и приглашает всех остальных присоединиться к проекту...</p>
-						<a href="#">Смотреть работу</a>
+			</div>
+			<div class="questions">
+				<div class="questions-inner">
+					<div class="search-tittle">
+						Проверка заявки по номеру
+					</div>
+					<div class="search-section">
+						<form class="search-order paid" method="post">
+							<input type="text" placeholder="Номер заявки" name="search-order">	
+						</form>	
+					</div>
+					<div class="regular-questions">
+						<p class="regular-questions-tittle">Частые вопросы</p>
+						<a href="#" class="see-all">См. все</a>
+					</div>
+					<div class="question">
+						Как происходит обмен?
+					</div>
+					<div class="answer">
+						Биткойны могут использоваться для обмена на товары или услуги у продавцов, которые согласны их принимать. 
+						Обмен на обычные валюты происходит через онлайн-сервис обмена цифровых валют, другие платёжные системы или обменные пункты.
+					</div>
+					<div class="question">
+						Это быстро?
+					</div>
+					<div class="answer">
+						Обмен на обычные валюты происходит через онлайн-сервис обмена цифровых валют, другие платёжные системы или обменные пункты.
+					</div>
+					<div class="question">
+						Как происходит обмен?
+					</div>
+					<div class="answer" id="last-answer">
+						Биткойны могут использоваться для обмена на товары или услуги у продавцов, которые согласны их принимать. 
+						Обмен на обычные валюты происходит через онлайн-сервис обмена цифровых валют, другие платёжные системы или обменные пункты.
+					</div>
+					<div class="chat">
+						<img src="img/think.png" class="think" alt="think">
+						<input class="hide hide-chat" id="hd-1" name="hd-1" type="checkbox">
+						<label class="chat-label" for="hd-1">Онлайн-чат</label>
+						<div class="chat-wrap">
+							<form class="message" id="message" method="post">
+								<div class="message-head">
+									<p>Онлайн-чат</p>
+								</div>
+								<div id="chatbox"></div>
+								<input type="text" name="usermsg" id="usermsg" form="message" placeholder="Задайте вопрос" class="form-control" required>
+								<input type="submit" name="to-ask" class="to-ask" form="message" value="Спросить">
+							</form>
+						</div>
+					</div>
+					<div class="ticket-system">
+						<img src="img/rectangle.png" class="rectange" alt="rectange">
+						<input class="hide hide-ticket" id="hd-2" name="hd-2" type="checkbox">
+						<label class="ticket-label" for="hd-2">Тикет-система</label>
+						<div class="ticket-system-wrap">
+							<form method="post" class="message" id="addticket">
+								<div class="message-head">
+									<p>Оставьте заявку</p>
+								</div>
+								<div id="ticketbox">
+									<input type="text" name="username" id="tusername" placeholder="Имя" form="addticket" class="form-control" required>
+									<input type="text" name="usermail" id="tusermail" placeholder="Email" form="addticket" class="form-control" required>
+									<input type="text" name="usersubj" id="tusersubj" placeholder="Тема запроса" form="addticket" class="form-control" required>
+									<textarea name="tusertext" id="tusertext" placeholder="Опишите суть проблемы" form="addticket" class="form-control" required></textarea>
+									<input class="addticket" name="addticket" type="submit" form="addticket" value="Оставьте заявку">
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 wow fadeInLeft" data-wow-duration="0.8s">
-				<h4 class="footer-author">Владислав Ковлешенко</h4>
-				<p>Разработка сайтов под ключ</p>
-			</div>
-			<div class="col-md-4">
-				<div class="social-block">
-					<p class="wow fadeInUp" data-wow-delay="0.5s">Подпишитесь:</p>
-					<div class="social-col">
-						<a href="https//vk.com/id203383148" ><img class="wow fadeInUp" data-wow-delay="0.6s" src="img/vk-social-logotype.png" alt="vk"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="0.8s" src="img/facebook-logo-button.png" alt="facebook"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="1s" src="img/telegram-symbol.png" alt="telegram"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="1.2s" src="img/youtube-symbol.png" alt="youtube"></a>
-					</div>
+	</section>
+	<footer>
+		<div class="footer-wrapper">
+			<div class="footer-rights">
+				<div class="footer-rights-wrapper">
+					<h2 class="footer-rights-logo">BTC2Qiwi</h2>
+					<p>2017. Все права сохранены</p>
 				</div>
 			</div>
-			<div class="col-md-4 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.8s">
-				<div class="footer-col">
-					<p class="footer-feedback">Напишите мне:</p>
-					<a href="https://vk.com/id203383148" class="footer-button">Написать</a>
-				</div>
+			<div class="footer-icons">
+				<img src="img/bitcoin-footer.png" alt="footer-btc" id="footer-btc">
+				<img src="img/qiwi-footer.png" alt="footer-qiwi" id="footer-qiwi">
+			</div>
+			<div class="footer-menu">
+				<ul class="footer-ul">
+					<li><a href="#">Как работает</a></li>
+					<li><a href="#">Безопасность</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Партнёрам</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<div class="modal" id="modal">
+		<div class="modal-wrap">
+			<div class="modal-header clearfix">
+				<h1>Заголовок модального окна</h1>
+				<a href="#" class="modal-close"><i class="fas fa-times" id="modal-close-id"></i></a>
+			</div>
+			<div class="modal-section">
+				<p> Можно предположить, что комплексное число недоказуемо. Огибающая семейства поверхностей отрицательна. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vero excepturi doloribus, repellat quibusdam fugiat sed perferendis? Error illo tenetur dolore perspiciatis, officia iste id, possimus, aspernatur velit nobis excepturi architecto itaque saepe, quis inventore. Ab suscipit omnis repudiandae nobis debitis doloribus dolorem consectetur, reprehenderit numquam dolore, quibusdam ex obcaecati dignissimos voluptatibus voluptas, harum totam facere sapiente delectus quas libero! </p>
 			</div>
 		</div>
 	</div>
-</footer>
-<script src="animate/wow.min.js"></script>
-<script> new WOW ().init(); </script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </body>
 </html>
