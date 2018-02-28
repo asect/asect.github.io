@@ -68,7 +68,7 @@ particlesJS('particles-stay',
         "width": 1
       },
       "move": {
-        "enable": false,
+        "enable": true,
         "speed": 3,
         "direction": "none",
         "random": false,
@@ -189,7 +189,7 @@ particlesJS('particles-header',
         "width": 1
       },
       "move": {
-        "enable": false,
+        "enable": true,
         "speed": 2,
         "direction": "none",
         "random": false,
