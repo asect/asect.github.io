@@ -1,91 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description">
-		<meta name="auyhor">
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-		<link rel="icon" href="/favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-		<title></title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="animate/animate.css">
+	<meta charset="UTF-8">
+	<title>FinSoftware</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-grid.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-					<img src="img/imac--smart-object-.png" alt="screen">
-				</div>
-				<div class="col-lg-5 ">
-					<p class="header-pre-tittle wow fadeInLeft" data-wow-delay="0.1s">Веб-разработчик</p>
-					<h1 class="header-tittle wow fadeInRight">Владислав Ковшешенко</h1>
-					<p class="header-text wow fadeInLeft">Верстка на HTML/CSS <br> Разработка сайтов под ключ</p>
-					<div class="header-button-block wow fadeIn" data-wow-duration="3s" data-wow-delay="0.8s">
-						<a href="https://vk.com/id203383148">Связаться</a>
-						<small>*Это бесплатно</small>
+		<div class="header-wrapper">
+				<div class="header-menu">
+					<div class="header-logo">
+						<label for="burger-shower" class="hamburger"><i class="fas fa-bars"></i></label>
+						<a class="header-logotype" href="#"><img src="img/logotype.png" alt="logotype"></a>
+					</div>
+					<div class="header-list">
+						<div class="header-navbar">
+							<input type="checkbox" id="burger-shower" name="burger-shower" class="burger-shower">
+							<ul class="header-ul" >
+								<li class="menu-li"><a href="#">What We Do</a></li>
+								<li class="menu-li"><a href="#">Pricing</a></li>
+								<li class="menu-li"><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-register">
+						<a href="#" class="sign-in">Sign In</a>
+						<a href="#" class="create-account">Create Account</a>
 					</div>
 				</div>
-			</div>
+				<div class="header-background" id="particles-header"></div>
+			<div class="header-section">
+				<div class="header-section-wrapper">
+					<div class="header-content">
+						<div class="header-text-area">
+							<h1 class="header-tittle">solutions for financial markets</h1>
+								<p class="header-text">This should be some description to support the header. It can be up to three lines. Good luck!</p>
+						</div>
+							<a href="#" class="header-button">Drop us a note</a>
+						</div>
+						<div class="header-image">
+							<img src="img/computer-wo.png" alt="computer" class="header-computer">
+						</div>
+				</div>
+				</div>
+				<div class="header-rate">
+					<div class="rate-item">
+						<div class="rate-name">ETH / USD</div>
+						<div class="rate">$302.54</div>
+					</div>
+					<div class="rate-item">
+						<div class="rate-name">BTC / USD</div>
+						<div class="rate">$3102.20</div>
+					</div>
+					<div class="rate-item">
+						<div class="rate-name">BTC / ETH</div>
+						<div class="rate">0.096</div>
+					</div>
+				</div>
 		</div>
 	</header>
-<section class="portfolio wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.7s">
-	<div class="container">
-		<div class="portfolio-block">
-			<h2 class="portfolio-tittle">Портфолио</h2>
-			<div class="portfolio-subtittle">Мои работы</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="portfolio-col-1">
-						<img src="img/site.png" alt="гаспром">
-						<h3>внутренний университет «Газпром нефти»</h3>
-						<p>У «Газпром нефти» есть внутренний Корпоративный университет для сотрудников. Это настоящий университет, где сотрудники проходят обучение у внутренних тренеров компании или у специально приглашенных лекторов и экспертов....</p>
-						<a href="#">Смотреть работу</a>
+	<section>
+		<div class="advantages-bg">
+			<div class="advantages">
+				<div class="container">
+					<div class="row">
+						<div class="advantage-item col-lg-6 col-md-12">
+								<div class="advantage-image">
+									<img src="img/automation.png" alt="automation" id="automation">
+								</div>
+							<div class="advantage-content">
+								<h2>Business <a href="#" class="underline">automation</a></h2>
+								<p>Automation system development for businesses and facilities</p>
+							</div>
+						</div>
+						<div class="advantage-item col-lg-6 col-md-12">
+							<div class="advantage-image">
+								<img src="img/integration.png" alt="integration" id="integration">
+							</div>
+							<div class="advantage-content">
+								<h2>Payment systems <a href="#" class="underline">integration</a></h2>
+								<p>Counseling, connection of payment systems for the sites and businesses</p>
+							</div>
+						</div>
+						<div class="advantage-item col-lg-6 col-md-12">
+							<div class="advantage-image">
+								<img src="img/robots.png" alt="robots" id="robots">
+							</div>
+							<div class="advantage-content">
+								<h2>Stock <a href="#" class="underline">robots</a></h2>
+								<p>Automation of payment and payment solutions for business, automation of commercial sites and the establishment of exchange robots, trading</p>
+							</div>
+						</div>
+						<div class="advantage-item col-lg-6 col-md-12">
+							<div class="advantage-image">
+								<img src="img/infrastructure.png" alt="infrastructure" id="infrastructure">
+							</div>
+							<div class="advantage-content">
+								<h2>IT <a href="#" class="underline">infrastructure</a></h2>
+								<p>Consulting and development of IT infrastructure of enterprises, selection and setup software oespecheniya systems konroolya access</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="portfolio-col-2">
-						<img src="img/site2.png" alt="мир">
-						<h3>Сайт платежной системы «Мир»</h3>
-						<p>Обновленная версия сайта знакомит посетителей с компаниями, уже принимающими карты к оплате, и приглашает всех остальных присоединиться к проекту...</p>
-						<a href="#">Смотреть работу</a>
+			</div>
+			<div class="stay-ahead">
+				<div class="stay-ahead-background" id="particles-stay"></div>
+					<div class="container" id="stay-ahead-container">
+						<div class="stay-ahead-main">
+							<div class="phone">
+								<img src="img/phone-wo.png" id="stay-ahead-phone" alt="phone">
+							</div>
+							<div class="stay-ahead-content">
+								<h1>stay ahead of the game</h1>
+								<p>Mollie is dedicated to making payments better for everyone. No need to spend weeks on paperwork or security compliance procedures.
+								No more lost conversions because you don’t support a shopper’s favorite payment method or because they don’t feel safe.</p>
+							</div>
+						</div>
+						<div class="stay-ahead-button">
+							<a href="#" id="get-started">Get started</a>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="services">
+			<div class="container">
+				<div class="row">
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<div class="service-tittle">
+							<h2><a href="#" class="underline" id="Navigation UI">Navigation</a> UI</h2>
+						</div>
+						<p>Programming computers and navigation systems for cars</p>
+					</div>
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<div class="service-tittle">
+							<h2><a href="#" class="underline" id="Server">Server</a> maintenance</h2>
+						</div>
+						<p>Internet security, configuring servers, ips, ids</p>
+					</div>
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<div class="service-tittle">
+							<h2><a href="#" class="underline" id="Advertising">Advertising</a> and SEO</h2>
+						</div>
+						<p>Internet advertising and promotion of integrated sites. Need more text, obviously</p>
+					</div>
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<h2>Corp <a href="#" class="underline" id="communications">communications</a></h2>
+						<p>Automatic data collection and processing, statistics</p>
+					</div>
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<h2><a href="#" class="underline" id="Cryptocurrency">Cryptocurrency</a><a class="new" href="#">new</a></h2>
+						<p>The development and consulting in the field of systems cryptocurrency</p>
+					</div>
+					<div class="service-item col-lg-4 col-md-6 col-12">
+						<h2><a href="#" class="underline" id="Terminals">Terminals</a> and ATM’s</h2>
+						<p>Software development for self-service terminals and ATMs</p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 wow fadeInLeft" data-wow-duration="0.8s">
-				<h4 class="footer-author">Владислав Ковлешенко</h4>
-				<p>Разработка сайтов под ключ</p>
-			</div>
-			<div class="col-md-4">
-				<div class="social-block">
-					<p class="wow fadeInUp" data-wow-delay="0.5s">Подпишитесь:</p>
-					<div class="social-col">
-						<a href="https//vk.com/id203383148" ><img class="wow fadeInUp" data-wow-delay="0.6s" src="img/vk-social-logotype.png" alt="vk"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="0.8s" src="img/facebook-logo-button.png" alt="facebook"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="1s" src="img/telegram-symbol.png" alt="telegram"></a>
-						<a href="#" ><img class="wow fadeInUp" data-wow-delay="1.2s" src="img/youtube-symbol.png" alt="youtube"></a>
+		<div class="testimonials">
+			<div class="testimonials-border">
+				<h2 class="testimonials-tittle">testimonials</h2>
+				<div class="slider">
+					<div class="slider slider-count-3">
+						<!-- Список радиокнопок -->
+						<input type="radio" id="selector1" name="selector">
+						<input type="radio" id="selector2" name="selector">
+						<input type="radio" id="selector3" name="selector">
+
+						<!-- Список слайдов с картинками -->
+						<div class="item">
+							<img alt="first-reviewer" src="img/slide-1.png">
+						</div>
+						<div class="item">
+							<img alt="second-reviewer" src="img/slide-2.png">
+						</div>
+						<div class="item">
+							<img alt="third-reviewer" src="img/slide-3.png">
+						</div>
+
+						<!-- Контейнер меток с цифрами. По клику на них выбирается слайд и отменяется вся анимация -->
+						<div class="selector-list">
+							<label for="selector1"></label>
+							<label for="selector2"></label>
+							<label for="selector3"></label>
+						</div>
+						<div class="testimonials-text">
+							<h3 class="name">Silvia Divinere</h3>
+							<p class="review">Mollie is dedicated to making payments better for everyone. No need to spend weeks on paperwork or security compliance procedures.</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.8s">
-				<div class="footer-col">
-					<p class="footer-feedback">Напишите мне:</p>
-					<a href="https://vk.com/id203383148" class="footer-button">Написать</a>
-				</div>
-			</div>
 		</div>
-	</div>
-</footer>
-<script src="animate/wow.min.js"></script>
-<script> new WOW ().init(); </script>
+	</section>
+	<footer>
+		<div class="partners">
+				<h2>guys we made happy</h2>
+				<div class="partner-row">
+					<div class="partner-item"><img src="img/vonde.png" alt="vonde" id="vonde"></div>
+					<div class="partner-item"><img src="img/redbox.png" alt="redbox" id="redbox"></div>
+					<div class="partner-item"><img src="img/clothing.png" alt="clothing" id="clothing"></div>
+					<div class="partner-item"><img src="img/session.png" alt="session" id="session"></div>
+					<div class="partner-item"><img src="img/trinity.png" alt="trinity" id="trinity"></div>
+					<div class="partner-item"><img src="img/sunshine.png" alt="sunshine" id="sunshine"></div>
+				</div>
+		</div>
+	</footer>
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
