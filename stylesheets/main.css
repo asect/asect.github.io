@@ -1,39 +1,5 @@
 @charset "UTF-8";
 /*--==========  ==========-- */
-/*--========== import ==========-- */
-@font-face {
-  font-family: "Metropolis-Bold";
-  src: url("../font/Metropolis-Bold.otf");
-}
-@font-face {
-  font-family: "Metropolis-BoldItalic";
-  src: url("../font/Metropolis-BoldItalic.otf");
-}
-@font-face {
-  font-family: "Metropolis-Light";
-  src: url("../font/Metropolis-Light.otf");
-}
-@font-face {
-  font-family: "Metropolis-LightItalic";
-  src: url("../font/Metropolis-LightItalic.otf.otf");
-}
-@font-face {
-  font-family: "Metropolis-Regular";
-  src: url("../font/Metropolis-Regular.otf");
-}
-@font-face {
-  font-family: "Metropolis-RegularItalic";
-  src: url("../font/Metropolis-RegularItalic.otf");
-}
-@font-face {
-  font-family: "Metropolis-Thin";
-  src: url("../font/Metropolis-Thin.otf");
-}
-@font-face {
-  font-family: "Metropolis-ThinItalic";
-  src: url("../font/Metropolis-ThinItalic.otf");
-}
-/*--========== import ==========-- */
 /*--========= animate keysframes ===========-- */
 @keyframes fade-in {
   from {
